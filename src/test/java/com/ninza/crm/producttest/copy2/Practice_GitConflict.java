@@ -4,7 +4,7 @@ public class Practice_GitConflict {
 
 	public static void main(String[] args) {
 		System.out.println("Please help");
-
+		System.out.println("pl");
 	}
 
 }
