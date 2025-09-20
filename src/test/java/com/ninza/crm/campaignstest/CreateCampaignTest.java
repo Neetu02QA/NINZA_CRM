@@ -123,7 +123,7 @@ public class CreateCampaignTest  extends BaseClass {
 		wait.until(ExpectedConditions.visibilityOf(toastMsg));
 
 		String msg = toastMsg.getText();
-		System.out.println("Message to be printed "+msg);
+//		System.out.println("Message to be printed "+msg);
 		Assert.assertTrue(msg.contains("Successfully Added"));
 		
 
