@@ -46,14 +46,14 @@ public class BaseClass {
 	@BeforeMethod(groups = {"Smoke","Regression"})
 	public void beforeMethod() throws IOException {
 		System.out.println("Login");
-//		String URL = pf.toGetDataFromProperitiesFile("url");
-//		String USERNAME = pf.toGetDataFromProperitiesFile("username");
-//		String PASSWORD = pf.toGetDataFromProperitiesFile("password");
-		String URL = System.getProperty("URL");
-		String USERNAME = System.getProperty("username");
-		String PASSWORD = System.getProperty("password");
-		
-		
+		String URL = pf.toGetDataFromProperitiesFile("url");
+		String USERNAME = pf.toGetDataFromProperitiesFile("username");
+		String PASSWORD = pf.toGetDataFromProperitiesFile("password");
+//		String URL = System.getProperty("URL");
+//		String USERNAME = System.getProperty("username");
+//		String PASSWORD = System.getProperty("password");
+//		
+//		
 		LoginPage lp = new LoginPage(driver);
 		lp.loginIntoApp(URL, USERNAME, PASSWORD);
 	}
@@ -69,13 +69,13 @@ public class BaseClass {
 //	public void beforeClass(String BROWSER) throws IOException {
 		public void beforeClass() throws IOException {
 		System.out.println("Launch the browser");
-//		String BROWSER = pf.toGetDataFromProperitiesFile("browser");
+		String BROWSER = pf.toGetDataFromProperitiesFile("browser");
 
 		//command line
 //		mvn -DBrowser=EDGE -DURL=http://49.249.28.218:8098/ -Dusername=rmgyantra -Dpassword=rmgy@9999 test 
 //		mvn -DBrowser=CHROME -DURL=http://49.249.28.218:8098/ -Dusername=rmgyantra -Dpassword=rmgy@9999 -Dtest=CreateCampaignTest test
 //		mvn test -DBrowser=CHROME -DURL=http://49.249.28.218:8098/ -Dusername=rmgyantra -Dpassword=rmgy@9999 -Dtest=CreateCampaignTest#createCamapignWithMandataoryFieldsTest
-		String BROWSER = System.getProperty("Browser");
+//		String BROWSER = System.getProperty("Browser");commmented
 
 		
 //		WebDriverManager.chromedriver().setup(); 
